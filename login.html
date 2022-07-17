@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+            <title>Login</title>
+            <link rel = "icon" href ="img/favicon.ico" type = "image/x-icon">   <!--Icon-->
+            <link rel="shortcut icon" href="img/favicon.ico">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--icons!-->
+          <link rel="stylesheet" type="text/css" href="css\ourbrands.css">
+
+          <!--Brands Styling!-->
+          <link rel="stylesheet" type="text/css" href="css\Style.css"><!--Nav and Footer Styling!-->
+          <link rel="stylesheet" type="text/css" href="css\Home.css"><!--Sliders and home styling!--->
+          <link rel="stylesheet" type="text/css" href="css/headerfooterstyle.css">
+       
+      
+      
+     <link rel="stylesheet" href="css/login.css">
+        </head>
+        <body>
+            <header>
+          <ul class="navigation">
+            <li class="navbar1"><a href="tel:03360148583">
+                <i style="font-size:13px" class="fa">&#xf095;</i>+92-3360148583</a></li>
+            <li class="navbar1"><a  href="#"><i style="font-size:10px" class="fa">&#xf017;</i>12:00 - 10:00 PM</a></li>
+            <li class="navbar1"><a class="active"  href="login.html"><i style="font-size:13px; color:white;" class="fa">&#xf2be;</i> &nbsp; Login/Signup</a></li>
+            <li class="navbar1"><a href="OutletLocation.html"><i style="font-size:13px" class="fa">&#xf041;</i> OutLet Location</a></li>
+          </ul>
+            <div class="header">
+            <!---  logo ---> 
+         <a href="Home.html"> <img src="img\logo.png" alt="logo"></a>
+          
+            </div>
+          </header>
+        <nav>
+        <ul class="top-nav" >
+        <li class="topnavbar"><a  href="Home.html">Home</a></li>
+        <li class="topnavbar"><a  href="About.html">About Us</a></li>
+        <li class="topnavbar"><a  href="ContactUs.html">Contact Us</a></li>
+        <!-- <li style="float: right;" class="topnavbar"><a href="#"> -->
+        </ul>
+    </nav>
+
+
+
+    <div>
+        <img  id="background"  src="img/cityback.jpg"
+      
+    </video>
+    <div id="container">
+            <div id="tabs">
+                
+                <div id="clear"></div>
+            </div>
+    
+            <div id="cont">
+                <div id="login" class="comm">
+                    <center><h2 class="loginhead">Login</h2></center>
+    
+                    <input id="se" type="email" placeholder="   Email" required/>
+                    <input id="sp" type="password" placeholder="   Password" required/>
+                    <input type="submit" onclick="login()" value="Login">
+                    <span style="color: white;  font-size: 13px;"> &nbsp; &nbsp; Not Registered? </span>
+                    <input type="submitw" value="Register Yourself" onclick="regTabFun()" />
+                    <p class="frgt" onclick="forTabFun()">Forget Password?</p>
+                </div>
+                <div id="register" class="comm">
+                    <center><h2 class="loginhead">Register</h2></center>
+    
+                    <input id="name" type="email" placeholder="   Name" required/>
+    
+                    <input id="re" type="email" placeholder="   Email" required/>
+                    
+    
+                    <input id="rp" type="password" placeholder="   New Password" required/>
+                    <input id="rrp" type="password" placeholder="   Re-write Password" required/>
+                    <input type="submit" onclick="register()" value="Submit"/>
+    
+                    <span style="color: white; font-size: 13px;">&nbsp; &nbsp;Already Registered? </span>
+                    <input type="submitw" value="Back to Login" onclick="loginTabFun()" />
+    
+                </div >
+                <div id="forgot" class="comm">
+                <h3>Forgot Password</h3>
+                <div>
+                    <input id="fe" type="email" placeholder="Email" required/>
+                    <input type="submit" onclick="forgot()" value="Submit"/>
+    
+                </div>
+                </div>
+            </div>
+        </div>
+      
+
+        <footer class="ct-footer" > 
+            <div class="container">
+            <div style="float:right;">
+              <h1 style="color:white; margin-top:30px">Subscribe to our newsletter</h1>
+            <input type="text" class="form-control" style="width:200px;" placeholder="Enter your email">
+             <input type="submit" id="btn" value="Subscribe" class="btn btn-primary" style="width:100px; margin-top:-55px; margin-left:240px;">
+             
+              <p style="color:white;">&copy; CityHostels.com.pk 2017 - 2022 All rights reserved.</p>
+             
+            </div>
+             <ul class="ct-footer-list text-center-sm">
+                <strong style="color: white; font-size:50px;letter-spacing: 4px;">City</strong><strong style="color: #f95f3c;letter-spacing: 4px;  font-size:50px">Hostels</strong><br>
+                <span style="letter-spacing: 4px; color:white">FIND NEAR BY HOSTELS IN YOUR AREA</span>
+                <li>
+                  <h2 style="color: #f95f3c; letter-spacing: 2px;">Quick Links</h2>
+                  <ul>
+                    <li>
+                      <a href="Home.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="About.html">About</a>
+                    </li>
+                    <li>
+                      <a href="Contactus.html">Contact</a>
+                    </li>
+                    <li>
+                      <a href="login.html">Login</a>
+                    </li>
+                  
+                  </ul>
+                </li>
+                <li>
+               
+             
+               
+               
+              </ul> 
+          <br>
+          </footer>
+          
+</body>
+</html>
+<script type="text/javascript">
+    var emailArray=[];
+     var passwordArray=[];
+
+     var loginBox = document.getElementById("login");
+     var regBox = document.getElementById("register");
+     var forgetBox = document.getElementById("forgot");
+
+     var loginTab = document.getElementById("lt");
+     var regTab = document.getElementById("rt");
+
+     function regTabFun(){
+
+         regBox.style.visibility="visible";
+         loginBox.style.visibility="hidden";
+         forgetBox.style.visibility="hidden";
+
+        //  regTab.style.backgroundColor="rgb(12, 132, 189)";
+        //  loginTab.style.backgroundColor="rgba(11, 177, 224, 0.82)";
+     }
+     function loginTabFun(){
+
+         regBox.style.visibility="hidden";
+         loginBox.style.visibility="visible";
+         forgetBox.style.visibility="hidden";
+
+        
+     }
+     function forTabFun(){
+         
+         regBox.style.visibility="hidden";
+         loginBox.style.visibility="hidden";
+         forgetBox.style.visibility="visible";
+
+         
+
+     }
+
+
+     function register(){
+
+         var name= document.getElementById("name").value;
+         var email = document.getElementById("re").value;
+         var password = document.getElementById("rp").value;
+         var passwordRetype = document.getElementById("rrp").value;
+
+         if (email == ""){
+             alert("Email required.");
+             return ;
+         }
+         else if(name=="")
+         {
+             alert("Name Required.");
+             return ;
+         }
+         else if (password == ""){
+             alert("Password required.");
+             return ;
+         }
+         else if (passwordRetype == ""){
+             alert("Password required.");
+             return ;
+         }
+         else if ( password != passwordRetype ){
+             alert("Password don't match retype your Password.");
+             return;
+         }
+         else if(emailArray.indexOf(email) == -1){
+             emailArray.push(email);
+             passwordArray.push(password);
+
+                 alert(email + "  Thanks for registration. \nTry to login Now");
+                                
+
+             document.getElementById("re").value ="";
+             document.getElementById("rp").value="";
+             document.getElementById("rrp").value="";
+         }
+         else{
+             alert(email + " is already register.");
+             return ;
+         }
+     }
+     function login(){
+
+         var email = document.getElementById("se").value;
+         var password = document.getElementById("sp").value;
+
+         var i = emailArray.indexOf(email);
+
+         if(emailArray.indexOf(email) == -1){
+             if (email == ""){
+                 alert("Email required.");
+                 return ;
+             }
+             alert("Email does not exist.");
+             return ;
+         }
+         else if(passwordArray[i] != password){
+             if (password == ""){
+                 alert("Password required.");
+                 return ;
+             }
+             alert("Password does not match.");
+             return ;
+         }
+         else {
+             alert(email + " you  are login Now \n welcome to our website.");
+             document.getElementById("se").value ="";
+             document.getElementById("sp").value="";
+             window.location.href="Home.html";//redirect
+             return ;
+         }
+
+     }
+     function forgot(){
+
+         var email = document.getElementById("fe").value;
+
+         if(emailArray.indexOf(email) == -1){
+             if (email == ""){
+                 alert("Email required.");
+                 return ;
+             }
+             alert("Email does not exist.");
+             return ;
+         }
+
+         alert("email is send to your email check it in 24hr. \n Thanks");
+         document.getElementById("fe").value ="";
+     }
+ </script>
